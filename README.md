@@ -3,13 +3,18 @@ Myfi アプリケーション
 
 ・使用技術
 言語: php javascript(jQuery Ajax含む) CSS 
+
 フレームワーク: Bootstrap
+
 DB: MySQL
+
 検証環境: MAMP
+
 デプロイ方法　Heroku
 
 ・概要
 オリジナルSNSサイトです。
+
 テスト用アカウントは以下の通りとなります。　
 メールアドレス: test@gmail.com
 パスワード: password
