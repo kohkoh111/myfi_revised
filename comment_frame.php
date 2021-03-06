@@ -4,6 +4,12 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
+	<style type="text/css">
+	*{
+		font-size: 14px;
+		font-family: Arial;
+	}
+	</style>
 
 	<?php
 	require 'config/config.php';
@@ -135,13 +141,29 @@
 			}
 
 			$user_obj = new User($con, $posted_by);
-			}
-		}
-	?>
+			?>
 
-<div class="comment_section">
-	<a href="<?= $posted_by ?>" target="_parent">Koki</a> 
-</div>
+			<!-- whileループが実行されるなら、繰り返し表示するようにする -->
+			<div class="comment_section">
+				<a href="<?= $posted_by ?>" target="_parent">
+					<img src="<?= $user_obj->getProfilePic(); ?>" title="<?= $posted_by ?>"
+					style="float:left;" height="30">
+				</a>
+
+				<a href="<?= $posted_by ?>" target="_parent">
+					<b><?= $user_obj->getFirstAndLastName(); ?></b>
+				</a>
+					&nbsp;&nbsp;&nbsp;
+					<?= $time_message. "<br>". $comment_body; ?>
+					<hr>
+			</div>
+
+			<?php
+				} //whileループ終了タグ
+			}//if文終了
+			?>
+
+
 
 
 
