@@ -140,7 +140,9 @@
 	?>
 
 <div class="comment_section">
-	<a href="<?= $posted_by ?>" target="_parent">Koki</a> 
+	<a href="<?= $posted_by ?>" target="_parent">
+		<img src="<?= $user_obj->getProfilePic(); ?>">
+	</a>
 </div>
 
 
