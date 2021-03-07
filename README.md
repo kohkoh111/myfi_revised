@@ -2,6 +2,7 @@ Myfi アプリケーション
 
 
 ・使用技術
+
 言語: php javascript(jQuery Ajax含む) CSS 
 
 フレームワーク: Bootstrap
