@@ -203,3 +203,32 @@ textarea:focus {
 	text-decoration: none;
 	border: none;
 }
+
+
+/* like・Unlikeのスタイルシート */
+.newsfeedPostOptions iframe{
+	border: none;
+	height: 15px;
+	width: 150px;
+}
+
+.comment_like{
+	background-color: transparent;
+  border: none;
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	height:auto;
+	width:auto;
+	color: #35a2ff;
+}
+
+.like_value{
+	display: inline;
+	font-size: 14px;
+}
+
+.newsfeedPostOptions form{
+	top: 0;
+	position: absolute;
+}
