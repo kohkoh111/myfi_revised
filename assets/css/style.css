@@ -12,6 +12,11 @@ body {
 	background-color: #E6EAE8;
 }
 
+a{
+	color: #35a2ff;
+	text-decoration: none;
+}
+
 .top_bar {
 	width: 100%;
 	min-width: 1050px;
@@ -158,6 +163,7 @@ textarea:focus {
 #comment_iframe{
 	max-height: 300px;
 	width: 100%;
+	margin-top: 10px;
 }
 
 .comment_section{
@@ -176,4 +182,24 @@ textarea:focus {
   border-radius: 7px;
   font-size: 14px;
   margin: 5px 7px 7px 5px;
+}
+
+#comment_form input[type="submit"]{
+	border:none;
+	background-color: #00BFFF;
+	color: #fff;
+	border-radius: 5px;
+	width: 15%;
+	height: 45px;
+	margin-top: 5px;
+	position: absolute;
+	font-family: 'Bellota-BoldItalic', sans-serif;
+	text-shadow: #73B6E2 0.5px 0.5px 0px;
+}
+
+.newsfeedPostOptions{
+	color: #35a2ff;
+	padding: 0;
+	text-decoration: none;
+	border: none;
 }

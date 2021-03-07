@@ -151,7 +151,7 @@
 				</a>
 
 				<a href="<?= $posted_by ?>" target="_parent">
-					<b><?= $user_obj->getFirstAndLastName(); ?></b>
+					<?= $user_obj->getFirstAndLastName(); ?>
 				</a>
 					&nbsp;&nbsp;&nbsp;
 					<?= $time_message. "<br>". $comment_body; ?>
@@ -160,18 +160,13 @@
 
 			<?php
 				} //whileループ終了タグ
-			}//if文終了
+			}else{
+				echo "<center><br><br>No comments</center>";
+			}
+
 			?>
 
 
-<<<<<<< HEAD
-=======
-<div class="comment_section">
-	<a href="<?= $posted_by ?>" target="_parent">
-		<img src="<?= $user_obj->getProfilePic(); ?>">
-	</a>
-</div>
->>>>>>> 152560baf98b6b3d576297a379d7d3090f0699eb
 
 
 
