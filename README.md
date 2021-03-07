@@ -2,18 +2,21 @@ Myfi アプリケーション
 
 
 ・使用技術
-言語: php javascript(jQuery Ajax含む) CSS 
-
-フレームワーク: Bootstrap
-
+	
+言語: php javascript(jQuery Ajax含む) 
+	
+フレームワーク: Bootstrap(CSS)
+	
 DB: MySQL
-
-検証環境: MAMP
+	
+環境: MAMP
 
 デプロイ方法　Heroku
 
 
+
 ・概要
+
 オリジナルSNSサイトです。
 
 テスト用アカウントは以下の通りとなります。　
@@ -42,8 +45,5 @@ DB: MySQL
 
 ・将来へ向けて
 
-セキュリティ対策
 
-CSRF対策
-
-トークン発行などの勉強をする予定
+セキュリティ対策についても学習予定
