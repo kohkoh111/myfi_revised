@@ -164,6 +164,14 @@
 			?>
 
 
+<<<<<<< HEAD
+=======
+<div class="comment_section">
+	<a href="<?= $posted_by ?>" target="_parent">
+		<img src="<?= $user_obj->getProfilePic(); ?>">
+	</a>
+</div>
+>>>>>>> 152560baf98b6b3d576297a379d7d3090f0699eb
 
 
 
