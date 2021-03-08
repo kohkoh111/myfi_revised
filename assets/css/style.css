@@ -302,3 +302,26 @@ textarea:focus {
   border-radius: 5px;
   border: none;
 }
+
+
+/* requests.phpのスタイルシート */
+
+#accept_button{
+	height: 30px;
+	width: 20%;
+	border-radius: 5px;
+	margin: 5px;
+	border: none;
+	color: #fff;
+	background-color: #2ecc71;
+}
+
+#ignore_button{
+	height: 30px;
+	width: 20%;
+	border-radius: 5px;
+	margin: 5px;
+	border: none;
+	color: #fff;
+	background-color: #e74c3c;
+}

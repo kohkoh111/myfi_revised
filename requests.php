@@ -34,7 +34,8 @@ include("includes/classes/Post.php");
         if(isset($_POST['ignore_request' . $user_from])){
           $delete_query = mysqli_query($con, "DELETE FROM friend_requests WHERE user_to='$userLoggedIn' AND user_from='$user_from'");
           echo "Your request is rejected";
-          header("Location:requests.php");
+          header("Location:requests
+          .php");
 
         }
         ?>
