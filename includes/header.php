@@ -1,5 +1,6 @@
-<?php  
+<?php
 require 'config/config.php';
+
 
 
 if (isset($_SESSION['username'])) {
@@ -29,7 +30,7 @@ else {
 </head>
 <body>
 
-	<div class="top_bar"> 
+	<div class="top_bar">
 
 		<div class="logo">
 			<a href="index.php">Swirlfeed!</a>
@@ -48,7 +49,7 @@ else {
 			<a href="#">
 				<i class="fa fa-bell fa-lg"></i>
 			</a>
-			<a href="#">
+			<a href="requests.php">
 				<i class="fa fa-users fa-lg"></i>
 			</a>
 			<a href="#">
