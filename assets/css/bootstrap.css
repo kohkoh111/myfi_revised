@@ -1088,6 +1088,13 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+
+textarea{
+  width: 550px;
+  height: 60px;
+  border-radius: 5px;
+}
+
 a {
   color: #337ab7;
   text-decoration: none;
@@ -5770,7 +5777,7 @@ button.close {
   border-bottom: 1px solid #e5e5e5;
 }
 .modal-header .close {
-  margin-top: -2px;
+  margin-top: -22px;
 }
 .modal-title {
   margin: 0;

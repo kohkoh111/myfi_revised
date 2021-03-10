@@ -1,7 +1,6 @@
-<?php 
+<?php
 include("includes/header.php");
-include("includes/classes/User.php");
-include("includes/classes/Post.php");
+
 
 
 if(isset($_POST['post'])){
@@ -16,13 +15,13 @@ if(isset($_POST['post'])){
 
 		<div class="user_details_left_right">
 			<a href="<?php echo $userLoggedIn; ?>">
-			<?php 
+			<?php
 			echo $user['first_name'] . " " . $user['last_name'];
 
 			 ?>
 			</a>
 			<br>
-			<?php echo "Posts: " . $user['num_posts']. "<br>"; 
+			<?php echo "Posts: " . $user['num_posts']. "<br>";
 			echo "Likes: " . $user['num_likes'];
 
 			?>
@@ -51,7 +50,7 @@ if(isset($_POST['post'])){
 
 		$('#loading').show();
 
-		//Original ajax request for loading first posts 
+		//Original ajax request for loading first posts
 		$.ajax({
 			url: "includes/handlers/ajax_load_posts.php",
 			type: "POST",
@@ -80,15 +79,15 @@ if(isset($_POST['post'])){
 					cache:false,
 
 					success: function(response) {
-						$('.posts_area').find('.nextPage').remove(); //Removes current .nextpage 
-						$('.posts_area').find('.noMorePosts').remove(); //Removes current .nextpage 
+						$('.posts_area').find('.nextPage').remove(); //Removes current .nextpage
+						$('.posts_area').find('.noMorePosts').remove(); //Removes current .nextpage
 
 						$('#loading').hide();
 						$('.posts_area').append(response);
 					}
 				});
 
-			} //End if 
+			} //End if
 
 			return false;
 

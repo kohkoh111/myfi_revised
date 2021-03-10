@@ -27,7 +27,7 @@ class Post {
 			}
 
 			//insert post
-			$query = mysqli_query($this->con, "INSERT INTO posts VALUES('', '$body', '$added_by', '$user_to', '$date_added', 'no', 'no', '0')");
+			$query = mysqli_query($this->con, "INSERT INTO posts VALUES(NULL, '$body', '$added_by', '$user_to', '$date_added', 'no', 'no', '0')");
 			$returned_id = mysqli_insert_id($this->con);
 
 			//Insert notification
@@ -71,7 +71,7 @@ class Post {
 					$user_to = "";
 				}
 				else {
-					$user_to_obj = new User($con, $row['user_to']);
+					$user_to_obj = new User($this->con, $row['user_to']);
 					$user_to_name = $user_to_obj->getFirstAndLastName();
 					$user_to = "to <a href='" . $row['user_to'] ."'>" . $user_to_name . "</a>";
 				}
@@ -96,6 +96,12 @@ class Post {
 					else {
 						$count++;
 					}
+
+					if($userLoggedIn == $added_by)
+					$delete_button = "<button class='delete_button btn-danger' id='post$id'>X</button>";
+					else
+					$delete_button = "";
+
 
 					$user_details_query = mysqli_query($this->con, "SELECT first_name, last_name, profile_pic FROM users WHERE username='$added_by'");
 					$user_row = mysqli_fetch_array($user_details_query);
@@ -197,6 +203,7 @@ class Post {
 
 								<div class='posted_by' style='color:#ACACAC;'>
 									<a href='$added_by'> $first_name $last_name </a> $user_to &nbsp;&nbsp;&nbsp;&nbsp;$time_message
+									$delete_button
 								</div>
 								<div id='post_body'>
 									$body
@@ -205,7 +212,7 @@ class Post {
 
 								<div class='newsfeedPostOptions'>
 									Comments($comments_check_num)&nbsp;
-									<iframe src='like.php?post_id=$id' scrolling='no'></iframe> 
+									<iframe src='like.php?post_id=$id' scrolling='no'></iframe>
 
 								</div>
 
@@ -219,7 +226,20 @@ class Post {
 							</div>
 							<hr>";
 				}
+				?>
 
+				<script>
+				$(document).ready(function(){
+					$('#<?= $id ?>').on('click', function(){
+						bootbox.confirm("Are you sure?", function(result){
+							$.post("includes/form_handlers/delete_post.php?post_id=<?= $id ?>", {result:result});
+							if(result)
+							location:reload();
+						});
+					});
+				});
+				</script>
+				<?php
 			} //End while loop
 
 			if($count > $limit)
