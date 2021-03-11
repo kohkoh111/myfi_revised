@@ -6,7 +6,7 @@ $em = ""; //email
 $em2 = ""; //email 2
 $password = ""; //password
 $password2 = ""; //password 2
-$date = ""; //Sign up date 
+$date = ""; //Sign up date
 $error_array = array(); //Holds error messages
 
 if(isset($_POST['register_button'])){
@@ -44,12 +44,12 @@ if(isset($_POST['register_button'])){
 	$date = date("Y-m-d"); //Current date
 
 	if($em == $em2) {
-		//Check if email is in valid format 
+		//Check if email is in valid format
 		if(filter_var($em, FILTER_VALIDATE_EMAIL)) {
 
 			$em = filter_var($em, FILTER_VALIDATE_EMAIL);
 
-			//Check if email already exists 
+			//Check if email already exists
 			$e_check = mysqli_query($con, "SELECT email FROM users WHERE email='$em'");
 
 			//Count the number of rows returned
@@ -101,7 +101,7 @@ if(isset($_POST['register_button'])){
 		$check_username_query = mysqli_query($con, "SELECT username FROM users WHERE username='$username'");
 
 
-		$i = 0; 
+		$i = 0;
 		//if username exists add number to username
 		while(mysqli_num_rows($check_username_query) != 0) {
 			$i++; //Add 1 to i
@@ -118,11 +118,11 @@ if(isset($_POST['register_button'])){
 			$profile_pic = "assets/images/profile_pics/defaults/head_emerald.png";
 
 
-		$query = mysqli_query($con, "INSERT INTO users VALUES ('', '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
+		$query = mysqli_query($con, "INSERT INTO users VALUES (NULL, '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
 
 		array_push($error_array, "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>");
 
-		//Clear session variables 
+		//Clear session variables
 		$_SESSION['reg_fname'] = "";
 		$_SESSION['reg_lname'] = "";
 		$_SESSION['reg_email'] = "";

@@ -325,3 +325,15 @@ textarea:focus {
 	color: #fff;
 	background-color: #e74c3c;
 }
+
+
+/* 投稿の削除ボタン */
+.delete_button{
+	width: 20px;
+  height: 20px;
+	padding: 0;
+  float: right;
+  border-radius: 5px;
+  right: -15px;
+  position: relative;
+}

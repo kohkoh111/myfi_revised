@@ -228,19 +228,21 @@ class Post {
 				}
 				?>
 
+<!-- deleteボタンをクリックした時のAjax -->
 				<script>
 				$(document).ready(function(){
-					$('#<?= $id ?>').on('click', function(){
+					$('#post<?= $id ?>').on('click', function(){
 						bootbox.confirm("Are you sure?", function(result){
 							$.post("includes/form_handlers/delete_post.php?post_id=<?= $id ?>", {result:result});
 							if(result)
-							location:reload();
+							location.reload();
 						});
 					});
 				});
 				</script>
+
 				<?php
-			} //End while loop
+			} //while文の終了タグ
 
 			if($count > $limit)
 				$str .= "<input type='hidden' class='nextPage' value='" . ($page + 1) . "'>
