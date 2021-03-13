@@ -77,7 +77,7 @@ div.scrollTop = div.scrollHeight;
 <div class="user_details column" id="conversations">
   <h4>Conversations</h4>
   <div class="loaded_conversations">
-    <?= $message_obj->getConversations(); ?>
+    <!--/<?=// $message_obj->getConversations(); ?> -->
   </div>
   <br>
   <a href="message.php?u=new">New messages</a>
