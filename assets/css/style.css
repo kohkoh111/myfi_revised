@@ -303,6 +303,17 @@ textarea:focus {
   border: none;
 }
 
+.profile_main_column{
+	min-width:700px;
+	float:left;
+	width:75%;
+	z-index:-1;
+}
+
+.profile_info_bottom{
+	margin: 10px;
+}
+
 
 /* requests.phpのスタイルシート */
 
@@ -336,4 +347,57 @@ textarea:focus {
   border-radius: 5px;
   right: -15px;
   position: relative;
+}
+
+
+/* message.phpのスタイルシート */
+#message_textarea{
+	width: 81%;
+  margin-right: 10px;
+	border: 2px solid #c1c2c3;
+  font-size: 14px
+}
+
+#message_submit{
+	height: 60px;
+	width: 115px;
+	margin: 0 0 0 10px;
+	position: absolute;
+	border: none;
+	color: #fff;
+	border:none;
+	background-color: #00BFFF;
+	border-radius: 5px;
+	font-family: 'Bellota-BoldItalic', sans-serif;
+	text-shadow: #73B6E2 0.5px 0.5px 0px;
+}
+
+.message{
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 5px 10px;
+	display: inline-block;
+	color: #fff;
+}
+
+.message#blue{
+	float:right;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #3faaf7;
+}
+
+.message#green{
+	float: left;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #2ecc71;
+}
+
+.loaded_messages{
+	height: 100%;
+  min-height: 250px;
+  max-height: 400px;
+	overflow: scroll;
+	margin-bottom: 10px;
 }
