@@ -102,7 +102,7 @@ nav a:hover {
 	float:right;
 	width: 70%;
 	z-index: -1;
-	min-height: 160px;
+	min-height: 165px;;
 }
 
 .post_form {
@@ -400,4 +400,59 @@ textarea:focus {
   max-height: 400px;
 	overflow: scroll;
 	margin-bottom: 10px;
+}
+
+.loaded_conversations{
+	max-height: 260px;
+	overflow: scroll;
+}
+
+.user_found_messages{
+	border-bottom: 1px solid #b7b7b7;
+	padding: 10px 10px 10px 10px;
+}
+
+.user_found_messages:hover{
+background-color:#b7b7b7;
+}
+
+.user_found_messages img{
+	height: 35px;
+	float: left;
+}
+
+#grey{
+	color: #404040;
+
+}
+
+.resultDisplay{
+	padding: 5px 5px 0 5px;
+	height: 60px;
+	border-bottom: 1px solid #b7b7b7;
+}
+
+.resultDisplay a{
+	float:none;
+}
+
+.resultDisplay:hover{
+	background-color:#b7b7b7;
+}
+
+.liveSearchProfilePic img{
+	height: 45px;
+	border-radius: 100%;
+	float: left;
+	margin: 1px 12px 0 12px;
+}
+
+.liveSearchText p{
+	margin-left: 10px;
+	font-size: 12px;
+}
+
+/* profileページのCSS */
+.tab-content{
+	margin-top: 20px;
 }

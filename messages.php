@@ -56,7 +56,9 @@ if(isset($_POST['post_message'])){
     <?php
       if($user_to == "new"){
         echo "Select friends you would like to send messages<br>";
-        echo "To:<input type='text'>";
+        ?>
+        To:<input type='text' onkeyup='getUser(this.value, "<?= $userLoggedIn ?>")' name='q' id='search_text_input' placeholder='select name' autocomplete='off'>
+        <?php
         echo "<div class='results'></div>";
       }else{
         echo "<textarea name='message_body' id='message_textarea' placeholder='write messages'></textarea>";
@@ -74,16 +76,16 @@ var div = document.getElementById("scroll_message");
 div.scrollTop = div.scrollHeight;
 </script>
 
+<!-- div main_column columnクラスの終了タグ -->
+</div>
+
 <div class="user_details column" id="conversations">
   <h4>Conversations</h4>
   <div class="loaded_conversations">
-    <!--/<?=// $message_obj->getConversations(); ?> -->
+    <?= $message_obj->getConversations(); ?>
   </div>
   <br>
-  <a href="message.php?u=new">New messages</a>
+  <a href="messages.php?u=new">New messages</a>
 
 <!-- div=user_details column id=conversationクラスの終了タグ -->
-</div>
-
-<!-- div main_column columnクラスの終了タグ -->
 </div>
