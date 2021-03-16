@@ -458,7 +458,7 @@ background-color:#b7b7b7;
 }
 
 
-ドロップダウンボックスのスタイルシート
+/* ドロップダウンボックスのスタイルシート */
 .dropdown_data_window {
   background-color: #fff;
   border: 1px solid #DADADA;
